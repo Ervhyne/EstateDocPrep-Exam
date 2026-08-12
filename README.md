@@ -65,10 +65,7 @@ flow with a mocked Supabase client.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds a
-static export (`next build` with `output: "export"`) and publishes it to
-GitHub Pages. `.github/workflows/ci.yml` runs lint/typecheck/tests on every
+Deployed on **Vercel**, connected to this repo — every push to `main`
+triggers a new production deployment via Vercel's own GitHub integration.
+`.github/workflows/ci.yml` separately runs lint/typecheck/tests on every
 push and PR.
-
-One-time setup: in the repo's **Settings → Pages**, set **Source** to
-**GitHub Actions**.
